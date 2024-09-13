@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img {
+	-webkit-user-drag: none;
+}
+
+.btn-scale {
+	@apply transition-all hover:scale-110 active:scale-90;
+	/* !woc新属性grayscale!额可惜效果好不明显…… hover:grayscale active:grayscale-0 */
+}
+
+.btn-white {
+	@apply bg-white hover:bg-gray-100 active:bg-gray-200
+}
+
+.btn-blue {
+	@apply text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700
+}
+
+.underline-animation::before {
+	content: '';
+	height: 2px;
+	background: gray;
+	/* 伪元素默认样式 display: inline;所以需要转成inline-block宽高才会生效 */
+	display: inline-block;
+	/* 通过定位使下划线在最低层 */
+	position: absolute;
+	bottom: 8px;
+	width: 0;
+	/* 加上一个过渡效果，使之丝滑一些 */
+	transition: width 0.2s;
+
+	/* &:hover {
+		width: 100%;
+	} */
+}
+
+.underline-animation:hover::before {
+	width: 100%;
+}
+
+ul::before {
+	content: '';
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	border-radius: 100%;
+	background: black;
+	margin-left: 5px;
+	margin-right: 5px;
+}
