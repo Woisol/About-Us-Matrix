@@ -14,7 +14,7 @@ const featureInfo: { leadingImg: string, content: string }[] = [
 ]
 export default function Course() {
 	return (
-		<div className="w-screen h-screen relative snap-end pt-20">
+		<div id='course' className="w-screen h-screen relative snap-end pt-20">
 			<div className="absolute top-1/2 -translate-y-1/2 flex flex-col sm:flex-row sm:items-center justify-evenly">
 				<div className="flex- overflow-hidden">
 					{/* //!md必须加个div才能用flex-1 */}
