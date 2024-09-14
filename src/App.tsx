@@ -10,7 +10,8 @@ import MOJ from './page/Detail/MOJ'
 function App() {
 
   return (
-    <div className='w-screen h-screen overflow-auto snap-y snap-mandatory' >
+    <div className='w-screen h-screen overflow-auto snap-y snap-mandatory scroll-smooth' >
+      // !这次得了，就加在这里就能smooth了
       <Page_Home />
       <Header />
       <ProductIntro />
