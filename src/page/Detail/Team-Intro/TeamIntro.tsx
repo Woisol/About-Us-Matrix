@@ -1,6 +1,7 @@
-import photo1 from '../../../../public/photo/photo1.jpeg'
-import photo2 from '../../../../public/photo/photo2.jpeg'
-import photo3 from '../../../../public/photo/photo3.jpeg'
+import photo1 from '../../../public-not/photo1.jpeg'
+// import photo1 from '../../../public-not/photo1.jpeg'
+import photo2 from '../../../public-not/photo2.jpeg'
+import photo3 from '../../../public-not/photo3.jpeg'
 export default function TeamIntro() {
 	return (
 		<div id='team-intro' className="w-screen min-h-screen relative snap-end p-20">

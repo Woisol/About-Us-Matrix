@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const naviInfo: { title: string, href: string }[] = [
 	{ title: '产品介绍', href: 'product-intro' },
 	{ title: '团队介绍', href: 'team-intro' },
