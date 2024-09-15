@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import Page_Home from './page/Home'
 import './MainView.css'
+import 'animate.css'
 import Header from './page/Header'
 import ProductIntro from './page/Detail/Product-Intro/ProductIntro'
 import Course from './page/Detail/Product-Intro/Course'
@@ -30,10 +31,10 @@ function App() {
   // })
 
   return (
-    <div ref={scrollConRef} className='w-screen h-screen relative overflow-auto snap-y snap-mandatory scroll-smooth'
+    <div ref={scrollConRef} className='w-screen h-screen relative overflow-auto snap-y snap-mandatory scroll-smooth overflow-x-hidden'
       onScroll={() => {
         if (!scrollConRef.current) return;
-        console.log('onscroll');
+        // console.log('onscroll');
         // 噢噢调用了的！VSC好像没有把消息同步过来但是控制台是有了的
         // ……你好像一直忘记用launch来调试……
         innerHeight = window.innerHeight;

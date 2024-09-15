@@ -59,7 +59,7 @@ export default function JoinUs() {
 			{/* // ！snap-end并不一定需要h-screen！不用反而可以简单实现正常的页面滚动！ */}
 			{/* //!？branch了一下现在又不会出现跳转过头的问题了？？ */}
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
-			<div className='my-4'>
+			<div className='my-4 animation-show'>
 				<p className="w-full text-center text-xl text-blue-300">我能获得什么？</p>
 				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{toGainInfo.map((item, index) =>
@@ -71,7 +71,7 @@ export default function JoinUs() {
 					)}
 				</div>
 			</div>
-			<div className='my-4'>
+			<div className='my-4 animation-show'>
 				<p className="w-full text-center text-xl text-blue-300">我能做些什么？</p>
 				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{toDoInfo.map((item, index) =>
@@ -84,7 +84,7 @@ export default function JoinUs() {
 			</div>
 			<button className='btn-scale btn-blue px-8 py-1 rounded-full' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
 			<div className="w-full h-[400px] sm:h-80"></div>
-			<div id='contact-us' className="w-full min-h-[400px] sm:min-h-80 absolute bottom-0 mt-16 pt-10 sm:pt-20 object-cover" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
+			<div id='contact-us' className="w-full min-h-[400px] sm:min-h-80 absolute bottom-0 mt-16 pt-10 sm:pt-20 object-cover animation-show" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
 				{/* //!为什么h就一定要个min呢？哪个拦着你这么高了？overflow-auto？ */}
 				<h2 className='w-full text-2xl text-white text-center'>Contact Us</h2>
 				{/* <img className='absolute bottom-0 object-cover pointer-events-none' draggable={false} src={footer} alt="" /> */}

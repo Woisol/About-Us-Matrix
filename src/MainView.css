@@ -1189,6 +1189,10 @@ video {
   transition-duration: 300ms;
 }
 
+body {
+  font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
+}
+
 .img {
   -webkit-user-drag: none;
 }
@@ -1255,7 +1259,7 @@ video {
   display: inline-block;
   /* 通过定位使下划线在最低层 */
   position: absolute;
-  bottom: 8px;
+  bottom: 3px;
   width: 0;
   /* 加上一个过渡效果，使之丝滑一些 */
   transition: width 0.2s;
@@ -1304,7 +1308,7 @@ ul::before {
 
 @keyframes zoomIn {
   from {
-    transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.1, 0.1, 0.1);
     opacity: 0;
   }
 
@@ -1314,15 +1318,72 @@ ul::before {
   }
 }
 
-@keyframes scaleX {
-  from {
-    /* transform: scaleX(0); */
-    width: 0;
+/* @keyframes scaleX {
+	from {
+		transform: scaleX(0);
+		width: 0;
+	}
+
+	to {
+		transform: scaleX(1);
+		width: 100%;
+	}
+} */
+
+@keyframes slide-l {
+  form {
+    left: -100%;
+    /* transform: translateX(100%); */
+    /* transform: translate3d(100%, -50%, 0); */
   }
 
   to {
-    /* transform: scaleX(1); */
-    width: 100%;
+    left: 0;
+    /* transform: translateX(0); */
+    /* transform: translate3d(0, -50%, 0); */
+  }
+}
+
+@keyframes slide-r {
+  form {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enterenter {
+  0% {
+    /* 加上文字间距 */
+    letter-spacing: 0.5em;
+    /* Z轴变换 */
+    transform: translateZ(300px);
+    /* filter: blur(); 像素模糊效果 */
+    filter: blur(12px);
+    /* 透明度也要改变 */
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateZ(12px);
+    filter: blur(0);
+    opacity: 1;
   }
 }
 
@@ -1345,15 +1406,65 @@ ul::before {
   /* ~~？？这个不能用vh和%的吗？ */
 }
 
-.animation-tab {
-  animation: scaleX 0.5s ease-in-out;
+/* .animation-tab {
+	animation: scaleX 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-timeline: scroll();
+} */
+
+.animation-slideIn-l {
+  animation: slide-l 0.5s ease-in-out;
   /* animation-fill-mode: forwards; */
-  animation-timeline: scroll();
+  animation-timeline: view();
+  /* animation-range: entry; */
+  /* animation-delay: 1s; */
 }
 
-.hover\:before\:w-\[calc\(100\%-20px\)\]:hover::before {
+.animation-slideIn-r {
+  animation: slide-r 0.5s ease-in-out;
+  /* animation-fill-mode: forwards; */
+  animation-timeline: view();
+  animation-range: 0 500px;
+}
+
+.animation-show {
+  opacity: 0;
+  animation: show 1s ease-in-out;
+  /* animation-fill-mode: forwards; */
+  animation-timeline: view();
+  /* animation-range: 0 30%; */
+}
+
+.animation-show-delay-1 {
+  opacity: 0;
+  animation: enterenter 1s ease-in-out;
+  animation-fill-mode: forwards;
+  /* !加个forward就可以防止动画完变回去了！ */
+  /* animation-timeline: view(); */
+  animation-delay: 1s;
+}
+
+.animation-show-delay-2 {
+  opacity: 0;
+  animation: enterenter 1s ease-in-out;
+  animation-fill-mode: forwards;
+  /* !加个forward就可以防止动画完变回去了！ */
+  /* animation-timeline: view(); */
+  animation-delay: 2s;
+}
+
+.animation-show-delay-3 {
+  opacity: 0;
+  animation: enterenter 1s ease-in-out;
+  animation-fill-mode: forwards;
+  /* !加个forward就可以防止动画完变回去了！ */
+  /* animation-timeline: view(); */
+  animation-delay: 3s;
+}
+
+.hover\:before\:w-\[calc\(100\%-30px\)\]:hover::before {
   content: var(--tw-content);
-  width: calc(100% - 20px);
+  width: calc(100% - 30px);
 }
 
 .group:hover .group-hover\:text-blue-400 {
@@ -1456,10 +1567,6 @@ ul::before {
     flex-direction: row;
   }
 
-  .sm\:gap-10 {
-    gap: 2.5rem;
-  }
-
   .sm\:gap-5 {
     gap: 1.25rem;
   }
@@ -1488,5 +1595,9 @@ ul::before {
 @media (min-width: 768px) {
   .md\:w-52 {
     width: 13rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 }

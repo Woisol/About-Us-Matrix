@@ -10,7 +10,7 @@ export default function Header({ curPage, windowInnerWidth }: { curPage: number,
 	// const [curPage, setCurPage] = useState(0);
 	return (
 		// <div className="w-screen h-screen snap-start">
-		<div className="w-screen h-20 shadow-lg sticky top-0 z-50 filter backdrop-blur-lg">
+		<div className="w-screen h-20 shadow-lg sticky top-0 z-50 filter backdrop-blur-lg select-none">
 			{/* //!无法使用left-1/2居中…… */}
 			<div className="w-fit h-20 absolute left-1/2 -translate-x-1/2 flex justify-center">
 				{/* <div className="w-full h-20 absolute left-0 border-b-4 border-blue-400 animation-tab"></div> */}
