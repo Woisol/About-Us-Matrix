@@ -12,9 +12,9 @@ export default function TeamIntro() {
 				{/* <div className=" w-full min-h-40"></div> */}
 				<span className="w-full">Matrix团队隶属于中山大学数据科学与计算机学院（软件学院），由来自全校不同院系的同学组成，旨在打造中大最优秀的计算机类课程管理系统和在线评测系统，并以此为中心开发其他有关产品，提供更好、更稳定的用户体验。</span>
 				<div className="w-full h-[400px] mt-4 grid grid-cols-3 grid-rows-2 gap-5">
-					<img src={photo1} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover " />
-					<img src={photo2} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover col-span-2 row-span-2" />
-					<img src={photo3} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover " />
+					<img src={photo1} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover dark:brightness-75 " />
+					<img src={photo2} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover dark:brightness-75 col-span-2 row-span-2" />
+					<img src={photo3} alt="team-photo" className="w-full h-full rounded-lg shadow-lg object-cover dark:brightness-75 " />
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* * {
+	transition: all 0.3s ease-in-out;
+} */
+
 body {
 	font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
 	scroll-behavior: smooth;
@@ -9,7 +13,14 @@ body {
 
 .img {
 	-webkit-user-drag: none;
+	/* @apply dark:brightness-75 */
+	/* !似乎不能用dark:的伪类…… */
 }
+
+/* .img:where(.dark, .dark *) {
+	filter: brightness(0.75);
+} */
+/* !？？？不起效？？ */
 
 .btn-scale {
 	@apply transition-all hover:scale-110 active:scale-90;
@@ -17,11 +28,11 @@ body {
 }
 
 .btn-white {
-	@apply bg-white hover:bg-gray-100 active:bg-gray-200
+	@apply bg-white hover:bg-gray-100 active:bg-gray-200 dark:bg-gray-200 hover:bg-gray-300 active:bg-gray-400
 }
 
 .btn-blue {
-	@apply text-white bg-blue-500 hover:bg-blue-600 active:bg-blue-700
+	@apply text-white shadow-xl shadow-blue-200 dark:shadow-blue-500 bg-blue-500 hover:bg-blue-600 active:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800 dark:active:bg-blue-900
 }
 
 .underline-animation::before {
@@ -175,6 +186,34 @@ ul::before {
 	}
 }
 
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+
+	20% {
+		transform: translateX(20px);
+	}
+
+	40% {
+		transform: translateX(-20px);
+	}
+
+	60% {
+		transform: translateX(20px);
+	}
+
+	80% {
+		transform: translateX(-20px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* !md那个animate.css用不了只好自己实现了…… */
+
 /* .animation-MOJ-timeline {
 	scroll-timeline: MOJ-timeling;
 } */
@@ -257,4 +296,9 @@ ul::before {
 	/* !加个forward就可以防止动画完变回去了！ */
 	/* animation-timeline: view(); */
 	animation-delay: 3s;
+}
+
+.animation-shake {
+	animation: shake 0.5s ease-in-out;
+	animation-fill-mode: forwards;
 }

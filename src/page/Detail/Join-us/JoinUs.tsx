@@ -60,11 +60,11 @@ export default function JoinUs() {
 			{/* //!？branch了一下现在又不会出现跳转过头的问题了？？ */}
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
 			<div className='my-4'>
-				<p className="w-full text-center text-xl text-blue-300">我能获得什么？</p>
+				<p className="w-full text-center text-xl text-blue-300 my-4">我能获得什么？</p>
 				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{toGainInfo.map((item, index) =>
-						<div key={index} className="w-52 p-5 bg-white rounded-lg shadow-lg flex flex-col">
-							<img src={item.img} alt={item.title} />
+						<div key={index} className="w-52 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col">
+							<img className='dark:brightness-75' src={item.img} alt={item.title} />
 							<ul className='text-xl text-blue-300 mb-3'>{item.title}</ul>
 							<p>{item.desc}</p>
 						</div>
@@ -72,28 +72,28 @@ export default function JoinUs() {
 				</div>
 			</div>
 			<div className='my-4'>
-				<p className="w-full text-center text-xl text-blue-300">我能做些什么？</p>
+				<p className="w-full text-center text-xl text-blue-300 my-4">我能做些什么？</p>
 				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{toDoInfo.map((item, index) =>
-						<div key={index} className="w-32 p-5 bg-white rounded-lg shadow-lg flex flex-col items-center">
-							<img src={item.avatar} alt={item.job} />
+						<div key={index} className="w-32 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col items-center">
+							<img className='dark:brightness-75' src={item.avatar} alt={item.job} />
 							<p className='text-xl text-blue-300 my-2'>{item.job}</p>
 						</div>
 					)}
 				</div>
 			</div>
 			<button className='btn-scale btn-blue px-8 py-1 rounded-full' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
-			<div className="w-full h-[400px] sm:h-80"></div>
-			<div id='contact-us' className="w-full min-h-[400px] sm:min-h-80 absolute bottom-0 mt-16 pt-10 sm:pt-20 object-cover" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
+			<div className="w-full h-[400px] md:h-80"></div>
+			<div id='contact-us' className="w-full min-h-[400px] md:min-h-80 absolute bottom-0 mt-16 pt-10 md:pt-20 object-cover dark:brightness-75" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
 				{/* //!为什么h就一定要个min呢？哪个拦着你这么高了？overflow-auto？ */}
 				<h2 className='w-full text-2xl text-white text-center'>Contact Us</h2>
 				{/* <img className='absolute bottom-0 object-cover pointer-events-none' draggable={false} src={footer} alt="" /> */}
-				<div className="w-[600px] mt-4 flex flex-col sm:flex-row items-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-					<img className='size-20 sm:size-32 mr-5' src={qrcode} alt="Matrix on Wechat" />
+				<div className="w-[750px] mt-4 flex flex-col md:flex-row items-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+					<img className='size-20 md:size-32 mr-5' src={qrcode} alt="Matrix on Wechat" />
 					{/* <div className=""></div> */}
-					<div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-4 sm:grid-rows-2 gap-4 text-white">
+					<div className="grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 text-white">
 						{contactInfo.map((item, index) =>
-							<div key={index} className="flex items-center">
+							<div key={index} className="w-fit flex items-center">
 								<img src={item.img} alt="" className="" />
 								<span className="ml-5 text-nowrap">{item.detail}</span>
 							</div>

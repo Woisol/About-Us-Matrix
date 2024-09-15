@@ -1,7 +1,7 @@
-import feature1 from '../../../assets/Product-Intro/ojfeature1.jpg'
-import feature2 from '../../../assets/Product-Intro/ojfeature2.jpg'
-import feature3 from '../../../assets/Product-Intro/ojfeature3.jpg'
-import feature4 from '../../../assets/Product-Intro/ojfeature4.jpg'
+import feature1 from '../../../assets/Product-Intro/ojfeature1.png'
+import feature2 from '../../../assets/Product-Intro/ojfeature2.png'
+import feature3 from '../../../assets/Product-Intro/ojfeature3.png'
+import feature4 from '../../../assets/Product-Intro/ojfeature4.png'
 const MOJDetailInfo: {
 	title: string,
 	description: string,
@@ -55,8 +55,8 @@ export default function MOJFeatures() {
 						<h2 className="text-xl font-bold text-blue-400 mb-5 relative">{item.title}</h2>
 						<p className="w-full h-fit whitespace-pre-wrap relative">{item.description}</p>
 						{/* // !使用whitespace允许换行！ */}
-						<div className="size-48"></div>
-						<img src={item.image} alt={item.title} className="h-64 absolute bottom-10 object-cover -z-10 bg-transparent" />
+						<div className="size-64"></div>
+						<img src={item.image} alt={item.title} className="h-64 absolute bottom-10 object-cover -z-10 bg-transparent dark:brightness-75" />
 					</div>
 				))}
 			</div>

@@ -1,6 +1,6 @@
-import naviCourse from '../../../assets/btn/navcourse.jpg'
-import naviExam from '../../../assets/btn/navexam.jpg'
-import naviOJ from '../../../assets/btn/navoj.jpg'
+import naviCourse from '../../../assets/btn/navcourse.png'
+import naviExam from '../../../assets/btn/navexam.png'
+import naviOJ from '../../../assets/btn/navoj.png'
 const productNaviInfo: { title: string, img: string, href: string }[] = [
 	{
 		title: '课程系统',
@@ -28,7 +28,7 @@ export default function ProductIntro() {
 					<a key={index} className="w-full flex flex-col justify-center items-center group btn-scale" href={`#${item.href}`}>
 						{/* //!很奇怪的用href有时smooth有时依然是直接跳转js就稳定 href={`#${item.href}`} */}
 						{/* //td非常奇怪现在是MOJ无法平滑跳转…… */}
-						<img className='size-48 sm:size-64 object-fill' src={item.img} alt="" />
+						<img className='size-48 sm:size-64 object-fill dark:brightness-75' src={item.img} alt="" />
 						<span className='text-xl transition-all group-hover:text-blue-400 z-10'>{item.title}</span>
 					</a>
 				))}
