@@ -65,8 +65,8 @@ ul::before {
 
 	to {
 		/* height: 50vh; */
-		transform: scale3d(1, 0.3, 1);
-		/* margin-bottom: -500px; */
+		transform: scale3d(1, 0.2, 1);
+		/* margin-bottom: -30vh; */
 		top: 95vh;
 		/* top: calc(80vh+80px); */
 		/* !注意不能用100vh不然抽搐 */
