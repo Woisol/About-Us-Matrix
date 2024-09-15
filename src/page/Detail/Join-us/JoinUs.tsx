@@ -54,9 +54,10 @@ const contactInfo: { img: string, detail: string }[] = [
 ]
 export default function JoinUs() {
 	return (
-		<div className="w-screen min-h-screen relative snap-end pt-20 flex flex-col items-center overflow-y-auto overflow-x-hidden">
+		<div id='join-us' className="w-screen min-h-screen relative snap-end pt-20 flex flex-col items-center overflow-y-auto overflow-x-hidden">
 			{/* // !？？？在一开始的基础上去掉h-screen就行了？？？？麻了绕路 */}
 			{/* // ！snap-end并不一定需要h-screen！不用反而可以简单实现正常的页面滚动！ */}
+			{/* //!？branch了一下现在又不会出现跳转过头的问题了？？ */}
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300">我能获得什么？</p>
@@ -83,13 +84,13 @@ export default function JoinUs() {
 			</div>
 			<button className='btn-scale btn-blue px-8 py-1 rounded-full' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
 			<div className="w-full h-[400px] sm:h-80"></div>
-			<div className="w-full min-h-[400px] sm:min-h-80 absolute bottom-0 mt-16 pt-20 object-cover" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
+			<div id='contact-us' className="w-full min-h-[400px] sm:min-h-80 absolute bottom-0 mt-16 pt-10 sm:pt-20 object-cover" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
 				{/* //!为什么h就一定要个min呢？哪个拦着你这么高了？overflow-auto？ */}
-				{/* <img className='absolute bottom-0 object-cover pointer-events-none' draggable={false} src={footer} alt="" /> */}
 				<h2 className='w-full text-2xl text-white text-center'>Contact Us</h2>
+				{/* <img className='absolute bottom-0 object-cover pointer-events-none' draggable={false} src={footer} alt="" /> */}
 				<div className="w-[600px] mt-4 flex flex-col sm:flex-row items-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
-					{/* <div className=""></div> */}
 					<img className='size-20 sm:size-32 mr-5' src={qrcode} alt="Matrix on Wechat" />
+					{/* <div className=""></div> */}
 					<div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-4 sm:grid-rows-2 gap-4 text-white">
 						{contactInfo.map((item, index) =>
 							<div key={index} className="flex items-center">

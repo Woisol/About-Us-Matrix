@@ -40,15 +40,15 @@ const MOJDetailInfo: {
 export default function MOJFeatures() {
 
 	return (
-		<div className="w-full min-h-[50vh] overflow-hidde p-10 relative z-10 rounded-lg shadow-xl flex items-center justify-center snap-end filter backdrop-blur-md">
+		<div className="w-full min-h-[50vh] overflow-hidde pt-20 sm:p-10 relative z-10 rounded-lg shadow-xl flex items-center justify-center snap-end filter backdrop-blur-md">
 			{/* // !嗯用50vh而不是400px后snap才稳定不会回滚 */}
 			{/* //!注意overflow-hidden和animation，至少和scale的不兼容！ */}
-			<div className="w-fit grid grid-cols-4 items-start gap-5 animation-MOJ-detail">
+			<div className={`w-fit grid grid-cols-1 grid-rows-4 sm:grid-cols-4 sm:grid-rows-1 items-start gap-1 sm:gap-5 animation-MOJ-detail`}>
 				{/* grid-rows-3 sm:grid-rows-1 sm: */}
 				{/* // ！这里差点以为animation和snap不兼容，但是其实本质是animation带有scale所以导致卡顿！ */}
 				{/* //!这里不能用left-1/2的做法不然会导致grid内部元素极其奇怪 */}
 				{MOJDetailInfo.map((item, index) => (
-					<div key={index} className="max-w-64 h-full px-2 sm:px-4 py-10 bg-whit shadow-lg shadow-blue-400 relative rounded-lg flex flex-col items-center ">
+					<div key={index} className="sm:max-w-64 h-full px-4 py-10 bg-whit shadow-lg shadow-blue-400 relative rounded-lg flex flex-col items-center ">
 						{/* w-full sm: */}
 						{/* // td？？？为什么加了bg-white就不显示图片了？？？ */}
 						{/* gap-10 */}

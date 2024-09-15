@@ -1,7 +1,7 @@
 import illuOJ from '../../../assets/Product-Intro/illuoj.jpg'
-export default function MOJ() {
+export default function MOJ({ windowInnerWidth }: { windowInnerWidth: number }) {
 	return (
-		<div id='MOJ' className="w-screen h-screen relative snap-end pt-20 overflow-hidden animation-MOJ">
+		<div id='MOJ' className={`w-screen h-screen relative snap-end pt-20 overflow-hidden ${windowInnerWidth > 640 ? 'animation-MOJ' : ''}`}>
 			<div className="h-full">
 				<div className="flex- overflow-hidden absolute top-1/4 sm:top-1/2 -translate-y-1/4 sm:-translate-y-1/2">
 					{/* //!md必须加个div才能用flex-1 */}
