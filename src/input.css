@@ -140,6 +140,20 @@ ul::before {
 	}
 }
 
+@keyframes show-early {
+	from {
+		opacity: 0;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 @keyframes enterenter {
 	0% {
 		/* 加上文字间距 */
@@ -205,6 +219,15 @@ ul::before {
 	/* animation-fill-mode: forwards; */
 	animation-timeline: view();
 	/* animation-range: 0 30%; */
+}
+
+.animation-show-early {
+	opacity: 0;
+	animation: show-early 1s ease-in-out;
+	animation-timeline: view();
+	/* animation-range: 0 60%; */
+	/* !不能用range不然下滑时消失…… */
+	/* animation-range: entry; */
 }
 
 .animation-show-delay-1 {

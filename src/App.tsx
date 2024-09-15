@@ -53,7 +53,7 @@ function App() {
       <Exam />
       <MOJ windowInnerWidth={windowInnerWidth} />
       <MOJFeatures />
-      <WeInProgress />
+      <WeInProgress windowInnerWidth={windowInnerWidth} />
       <TeamIntro />
       <JoinUs />
     </div>
