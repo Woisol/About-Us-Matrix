@@ -12,7 +12,7 @@ import WeInProgress from './page/Detail/Team-Intro/WeInProgress'
 import TeamIntro from './page/Detail/Team-Intro/TeamIntro'
 import JoinUs from './page/Detail/Join-us/JoinUs'
 
-
+// td可以考虑使用#跳转并支持鼠标前进后退键的功能
 function App() {
   const scrollConRef = useRef(null)
   const [curPage, setCurPage] = useState(0)

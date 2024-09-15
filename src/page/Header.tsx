@@ -19,7 +19,10 @@ export default function Header({ curPage, windowInnerWidth }: { curPage: number,
 					<div className="size-full rounded-lg shadow-lg bg-blue-600"></div>
 				</div>
 				{naviInfo.map((item, index) =>
-					<a key={index} onClick={() => document.getElementById(item.href)?.scrollIntoView({ behavior: "smooth" })}
+					<a key={index}
+						// href={`#${item.href}`}
+						// !这里又没办法用href了……不理解
+						onClick={() => document.getElementById(item.href)!.scrollIntoView({ behavior: 'smooth' })}
 						className={`w-28 md:w-52 h-full relative text-center transition-all duration-300 ${index === curPage ? 'text-white' : ''}`}>
 						{/*  ${index === curPage ? 'text-blue-300 border-b-2 border-blue-400' : ''} */}
 						<span className="box-border absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap">{item.title}</span>

@@ -4,6 +4,7 @@
 
 body {
 	font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
+	scroll-behavior: smooth;
 }
 
 .img {
@@ -164,10 +165,11 @@ ul::before {
 		filter: blur(12px);
 		/* 透明度也要改变 */
 		opacity: 0;
+		/* white-space: nowrap; */
 	}
 
 	100% {
-		transform: translateZ(12px);
+		/* transform: translateZ(12px); */
 		filter: blur(0);
 		opacity: 1;
 	}

@@ -578,6 +578,10 @@ video {
   bottom: 2.5rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -596,6 +600,10 @@ video {
 
 .right-1\/2 {
   right: 50%;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .top-0 {
@@ -715,6 +723,11 @@ video {
 .size-48 {
   width: 12rem;
   height: 12rem;
+}
+
+.size-\[600px\] {
+  width: 600px;
+  height: 600px;
 }
 
 .size-full {
@@ -844,6 +857,11 @@ video {
 
 .-translate-y-1\/4 {
   --tw-translate-y: -25%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[100\%\] {
+  --tw-translate-y: -100%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1191,6 +1209,7 @@ video {
 
 body {
   font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
+  scroll-behavior: smooth;
 }
 
 .img {
@@ -1392,10 +1411,11 @@ ul::before {
     filter: blur(12px);
     /* 透明度也要改变 */
     opacity: 0;
+    /* white-space: nowrap; */
   }
 
   100% {
-    transform: translateZ(12px);
+    /* transform: translateZ(12px); */
     filter: blur(0);
     opacity: 1;
   }
