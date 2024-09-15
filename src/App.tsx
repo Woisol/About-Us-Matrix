@@ -38,15 +38,15 @@ function App() {
         // ……你好像一直忘记用launch来调试……
         innerHeight = window.innerHeight;
         const scrollTop = (scrollConRef.current as HTMLDivElement).scrollTop;
-        if (scrollTop < innerHeight * 6) setCurPage(0);
-        else if (scrollTop < innerHeight * 7) setCurPage(1);
+        if (scrollTop < (windowInnerWidth > 640 ? innerHeight * 6.5 : innerHeight * 7.3)) setCurPage(0);
+        else if (scrollTop < (windowInnerWidth > 640 ? innerHeight * 7.5 : innerHeight * 8.3)) setCurPage(1);
         else if (scrollTop > (scrollConRef.current as HTMLDivElement).scrollHeight - innerHeight - 10) setCurPage(3);
-        else if (scrollTop < innerHeight * 9.5) setCurPage(2);
+        else if (scrollTop < (windowInnerWidth > 640 ? innerHeight * 10 : innerHeight * 11.5)) setCurPage(2);
       }}
     >
       {/* // !这次得了，就加在这里就能smooth了 */}
       <Page_Home />
-      <Header curPage={curPage} />
+      <Header curPage={curPage} windowInnerWidth={windowInnerWidth} />
       <ProductIntro />
       <Course />
       <Exam />
