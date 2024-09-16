@@ -13,7 +13,7 @@ export default function Header({ curPage, windowInnerWidth }: { curPage: number,
 			<div className="w-fit h-20 absolute left-1/2 -translate-x-1/2 flex justify-center">
 				{/* <div className="w-full h-20 absolute left-0 border-b-4 border-blue-400 animation-tab"></div> */}
 				{/* //!笑死进度根本对不上 */}
-				<div className="w-28 md:w-52 h-full px-5 py-2 absolute opacity-50 box-border transition-all duration-300" style={{ left: `${curPage * (windowInnerWidth > 768 ? 208 : 112)}px` }}>
+				<div className="w-28 md:w-52 h-full px-5 py-2 absolute opacity-50 box-border transition-all duration-300" style={{ left: `${curPage * (windowInnerWidth > 768 ? 13 : 7)}rem` }}>
 					<div className="size-full rounded-lg shadow-lg bg-blue-600"></div>
 				</div>
 				{naviInfo.map((item, index) =>

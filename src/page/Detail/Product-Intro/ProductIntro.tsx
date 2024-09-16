@@ -1,3 +1,4 @@
+import { forwardRef, LegacyRef } from 'react'
 import naviCourse from '../../../assets/btn/navcourse.png'
 import naviExam from '../../../assets/btn/navexam.png'
 import naviOJ from '../../../assets/btn/navoj.png'
@@ -18,12 +19,13 @@ const productNaviInfo: { title: string, img: string, href: string }[] = [
 		href: 'MOJ'
 	}
 ]
-export default function ProductIntro() {
+// export default
+const ProductIntro = forwardRef((_p, ref) => {
 	return (
 		// <>
-		<div id='product-intro' className="w-screen h-screen relative snap-end pt-20">
+		<div ref={ref as LegacyRef<HTMLDivElement>} id='product-intro' className="w-screen h-screen relative snap-end pt-20">
 			<p className='my-10 py-4 absolute left-1/2 -translate-x-1/2 border-t-4 border-blue-400 text-center text-4xl z-10'>产品介绍</p>
-			<div className="w-full absolute left-1/2 top-[calc(50%+60px)] -translate-x-1/2 -translate-y-1/2 grid grid-rows-3 md:gap-10 sm:grid-rows-1 sm:grid-cols-3 select-none animation-show">
+			<div className="w-full absolute left-1/2 top-[calc(50%+60px)] -translate-x-1/2 -translate-y-1/2 grid grid-rows-3 md:gap-10 sm:grid-rows-1 sm:grid-cols-3 select-none animation-show-early">
 				{productNaviInfo.map((item, index) => (
 					<a key={index} className="w-full flex flex-col justify-center items-center group btn-scale" href={`#${item.href}`}>
 						{/* //!很奇怪的用href有时smooth有时依然是直接跳转js就稳定 href={`#${item.href}`} */}
@@ -38,4 +40,6 @@ export default function ProductIntro() {
 		//  </>
 
 	)
-}
+})
+export default ProductIntro;
+// !不能连着写了似乎

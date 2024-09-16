@@ -15,6 +15,7 @@ import wechat from '../../../assets/contact/wechat.svg'
 import qq from '../../../assets/contact/qq.svg'
 import star from '../../../assets/contact/star.svg'
 import mail from '../../../assets/contact/mail.svg'
+import { forwardRef, LegacyRef } from 'react'
 
 
 const toGainInfo: { img: string, title: string, desc: string }[] = [
@@ -52,16 +53,17 @@ const contactInfo: { img: string, detail: string }[] = [
 		img: mail, detail: '邮箱：admin@matrix.moe '
 	}
 ]
-export default function JoinUs() {
+const JoinUs = forwardRef((_p, ref) => {
 	return (
-		<div id='join-us' className="w-screen min-h-screen relative snap-end pt-20 flex flex-col items-center overflow-y-auto overflow-x-hidden">
+		<div ref={ref as LegacyRef<HTMLDivElement>} id='join-us' className="w-screen min-h-screen relative snap-end pt-20 flex flex-col items-center overflow-y-aut overflow-x-hidde">
 			{/* // !？？？在一开始的基础上去掉h-screen就行了？？？？麻了绕路 */}
 			{/* // ！snap-end并不一定需要h-screen！不用反而可以简单实现正常的页面滚动！ */}
 			{/* //!？branch了一下现在又不会出现跳转过头的问题了？？ */}
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300 my-4">我能获得什么？</p>
-				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
+				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center animation-show-early">
+					{/* //~~ animation-show-early又不知为何没效果……？overflow-auto 也不行？！ */}
 					{toGainInfo.map((item, index) =>
 						<div key={index} className="w-52 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col">
 							<img className='dark:brightness-75' src={item.img} alt={item.title} />
@@ -73,7 +75,7 @@ export default function JoinUs() {
 			</div>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300 my-4">我能做些什么？</p>
-				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
+				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center animation-show-early">
 					{toDoInfo.map((item, index) =>
 						<div key={index} className="w-32 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col items-center">
 							<img className='dark:brightness-75' src={item.avatar} alt={item.job} />
@@ -82,7 +84,7 @@ export default function JoinUs() {
 					)}
 				</div>
 			</div>
-			<button className='btn-scale btn-blue px-8 py-1 rounded-full' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
+			<button className='btn-scale btn-blue px-8 py-1 rounded-full animation-show-early' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
 			<div className="w-full h-[400px] md:h-80"></div>
 			<div id='contact-us' className="w-full min-h-[400px] md:min-h-80 absolute bottom-0 mt-16 pt-10 md:pt-20 object-cover dark:brightness-75" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
 				{/* //!为什么h就一定要个min呢？哪个拦着你这么高了？overflow-auto？ */}
@@ -104,4 +106,5 @@ export default function JoinUs() {
 		</div>
 
 	)
-}
+})
+export default JoinUs;
