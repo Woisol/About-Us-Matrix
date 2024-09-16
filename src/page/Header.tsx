@@ -13,7 +13,7 @@ export default function Header({ curPage, windowInnerWidth }: { curPage: number,
 			<div className="w-fit h-20 absolute left-1/2 -translate-x-1/2 flex justify-center">
 				{/* <div className="w-full h-20 absolute left-0 border-b-4 border-blue-400 animation-tab"></div> */}
 				{/* //!笑死进度根本对不上 */}
-				<div className="w-28 md:w-52 h-full px-5 py-2 absolute opacity-50 box-border transition-all duration-300" style={{ left: `${curPage * (windowInnerWidth > 768 ? 13 : 7)}rem` }}>
+				<div className="btn-scale w-28 md:w-52 h-full px-5 py-2 absolute opacity-50 box-border transition-all duration-300" style={{ left: `${curPage * (windowInnerWidth > 768 ? 13 : 7)}rem` }}>
 					<div className="size-full rounded-lg shadow-lg bg-blue-600"></div>
 				</div>
 				{naviInfo.map((item, index) =>
@@ -21,7 +21,7 @@ export default function Header({ curPage, windowInnerWidth }: { curPage: number,
 						// href={`#${item.href}`}
 						// !这里又没办法用href了……不理解
 						onClick={() => document.getElementById(item.href)!.scrollIntoView({ behavior: 'smooth' })}
-						className={`w-28 md:w-52 h-full relative text-center transition-all duration-300 ${index === curPage ? 'text-white dark:text-blue-200' : ''}`}>
+						className={` btn-scale w-28 md:w-52 h-full relative text-center transition-all duration-300 ${index === curPage ? 'text-white dark:text-blue-200' : ''}`}>
 						{/*  ${index === curPage ? 'text-blue-300 border-b-2 border-blue-400' : ''} */}
 						<span className="box-border absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 text-nowrap">{item.title}</span>
 					</a>)}

@@ -96,7 +96,7 @@ ul::before {
 		opacity: 0;
 	}
 
-	to {
+	100% {
 		transform: scale3d(1, 1, 1);
 		opacity: 1;
 	}
@@ -178,12 +178,13 @@ ul::before {
 
 @keyframes zoomIn-early {
 	from {
-		transform: scale3d(0.1, 0.1, 0);
+		transform: scale3d(0.1, 0.1, 0.1);
+		/* !后面这个0.1不能是0……应该不是你之前想的z轴…… */
 		opacity: 0;
 	}
 
-	20% {
-		transform: scale3d(1, 1, 0);
+	30% {
+		transform: scale3d(1, 1, 1);
 		opacity: 1;
 	}
 
@@ -265,7 +266,7 @@ ul::before {
 	animation: zoomIn 1s ease-in-out;
 	animation-timeline: view();
 	/* animation-timeline: MOJ-timeling; */
-	animation-range: 0 500px;
+	animation-range: 0 400px;
 	/* ~~？？这个不能用vh和%的吗？ */
 }
 
@@ -309,13 +310,13 @@ ul::before {
 }
 
 .animation-zoomIn-early {
-	opacity: 0;
+	/* opacity: 0; */
 	animation: zoomIn-early 1s ease-in-out;
 	animation-timeline: view();
 	/* animation-range: 0 60%; */
 	/* !不能用range不然下滑时消失……用fillmode都不行…… */
-	animation-range: entry;
-	animation-fill-mode: forwards;
+	/* animation-range: entry; */
+	/* animation-fill-mode: forwards; */
 }
 
 .animation-show-delay-1 {

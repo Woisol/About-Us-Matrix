@@ -9,7 +9,7 @@ export default function Page_Home({ darkMode, setDarkMode }: { darkMode: boolean
 			<DarkModeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
 			<img className='max-w-full h-screen p-5 object-contain absolute right-1/2 sm:right-5 top-1/2 translate-x-1/2 sm:translate-x-0 -translate-y-1/2 opacity-10 pointer-events-none' draggable={false} src={logo_white} alt="" />
 			<img className='w-full h-1/3 absolute bottom-0 object-cover pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart1} alt="" />
-			<img className='size-[600px] object-contain absolute right-5 bottom-5 pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart} alt="" />
+			<img className='size-[600px] object-contain absolute -right-8 sm:right-5 bottom-0 pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart} alt="" />
 			<div className="w-fit h-64 absolute left-1/2 sm:left-20 -translate-x-1/2 sm:translate-x-0 top-1/2 -translate-y-[100%] sm:-translate-y-1/2 transition-all">
 				{/* //!好欸！加了个h限制就不会出现文字换行导致上面元素移位的问题了！ */}
 				<h1 className="text-7xl px-5 sm:text-9xl text-white dark:text-gray-200 font-bold animation-show-delay-1" >MATRIX </h1>

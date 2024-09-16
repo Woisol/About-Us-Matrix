@@ -48,7 +48,7 @@ export default function MOJFeatures() {
 				{/* // ！这里差点以为animation和snap不兼容，但是其实本质是animation带有scale所以导致卡顿！ */}
 				{/* //!这里不能用left-1/2的做法不然会导致grid内部元素极其奇怪 */}
 				{MOJDetailInfo.map((item, index) => (
-					<div key={index} className="sm:max-w-64 h-full px-4 py-10 bg-whit shadow-lg shadow-blue-400 relative rounded-lg flex flex-col items-center ">
+					<div key={index} className="sm:max-w-64 h-full px-4 py-10 bg-whit shadow-lg shadow-blue-400 relative rounded-lg flex flex-col items-center animation-zoomIn-early ">
 						{/* w-full sm: */}
 						{/* // td？？？为什么加了bg-white就不显示图片了？？？ */}
 						{/* gap-10 */}
