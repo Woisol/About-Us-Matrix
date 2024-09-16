@@ -2,7 +2,6 @@ import logo_white from '../assets/logo/logo-white.png'
 import bgstart1 from '../assets/bg/bgstart1.png'
 import bgstart from '../assets/bg/bgstart.png'
 import DarkModeSwitcher from './Components/DarkModeSwitcher'
-// !用svg似乎在过度拉长的时候右边都变成直线了……
 export default function Page_Home({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (value: boolean) => void }) {
 	return (
 		<div className="w-screen h-screen relative snap-start bg-gradient-to-t from-blue-200 to-blue-500 dark:from-blue-500 dark:to-blue-900">
@@ -11,7 +10,6 @@ export default function Page_Home({ darkMode, setDarkMode }: { darkMode: boolean
 			<img className='w-full h-1/3 absolute bottom-0 object-cover pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart1} alt="" />
 			<img className='size-[600px] object-contain absolute -right-8 sm:right-5 bottom-0 pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart} alt="" />
 			<div className="w-fit h-64 absolute left-1/2 sm:left-20 -translate-x-1/2 sm:translate-x-0 top-1/2 -translate-y-[100%] sm:-translate-y-1/2 transition-all">
-				{/* //!好欸！加了个h限制就不会出现文字换行导致上面元素移位的问题了！ */}
 				<h1 className="text-7xl px-5 sm:text-9xl text-white dark:text-gray-200 font-bold animation-show-delay-1" >MATRIX </h1>
 				{/* onLoad={(e) => { setTimeout(() => (e.target as HTMLHeadElement).classList.add('animate__zoomInDown'), 1000) }} */}
 				<p className="text-3xl px-5 sm:text-4xl text-white dark:text-gray-200 font-bold ">

@@ -12,7 +12,6 @@ export default function Exam() {
 					</div>
 				</div>
 				<div className="w-[700px] max-h-full overflow-hidde -ml-72 md:-ml-48 lg:ml-0 animation-show-early">
-					{/* //!md必须加个div才能用flex-1 */}
 					<img className='w-full h-full sm:w-[600px max-h- object-fill dark:brightness-75' src={illuExam} alt="Exam System" />
 				</div>
 			</div>

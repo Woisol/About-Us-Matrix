@@ -4,7 +4,6 @@ export default function MOJ({ windowInnerWidth }: { windowInnerWidth: number }) 
 		<div id='MOJ' className={`w-screen h-screen relative snap-end pt-20 overflow-hidde ${windowInnerWidth > 640 ? 'animation-MOJ' : ''}`}>
 			<div className="w-full h-full flex flex-col sm:flex-row items-start sm:items-center justify-between">
 				<div className="w-[700px] max-h-full overflow-hidde -mr-72 md:-mr-48 lg:mr-0 animation-show-early">
-					{/* //!md必须加个div才能用flex-1 */}
 					<img className='w-full h-full object-fill dark:brightness-75' src={illuOJ} alt="MOJ" />
 				</div>
 				<div className="max-w-full absolute bottom-20 sm:static flex sm:flex-1 items-center justify-center">

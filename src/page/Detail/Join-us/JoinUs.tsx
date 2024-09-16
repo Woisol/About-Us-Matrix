@@ -41,7 +41,6 @@ const toDoInfo: { avatar: string, job: string }[] = [
 const contactInfo: { img: string, detail: string }[] = [
 	{
 		img: wechat, detail: `扫描二维码关注Matrix公众号`
-		// !检测还要用用state算了……${window.innerWidth > 640 ? '左侧' : '上方'}
 	},
 	{
 		img: qq, detail: '用户交流群：206284035'
@@ -56,14 +55,10 @@ const contactInfo: { img: string, detail: string }[] = [
 const JoinUs = forwardRef((_p, ref) => {
 	return (
 		<div ref={ref as LegacyRef<HTMLDivElement>} id='join-us' className="w-screen min-h-screen relative snap-end pt-20 flex flex-col items-center overflow-y-aut overflow-x-hidde">
-			{/* // !？？？在一开始的基础上去掉h-screen就行了？？？？麻了绕路 */}
-			{/* // ！snap-end并不一定需要h-screen！不用反而可以简单实现正常的页面滚动！ */}
-			{/* //!？branch了一下现在又不会出现跳转过头的问题了？？ */}
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300 my-4">我能获得什么？</p>
 				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
-					{/* //~~ animation-show-early又不知为何没效果……？overflow-auto 也不行？！ */}
 					{toGainInfo.map((item, index) =>
 						<div key={index} className="w-52 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col animation-show-early">
 							<img className='dark:brightness-75' src={item.img} alt={item.title} />
@@ -87,12 +82,9 @@ const JoinUs = forwardRef((_p, ref) => {
 			<button className='btn-scale btn-blue px-8 py-1 rounded-full animation-show-early' onClick={() => { window.open('https://mp.weixin.qq.com/s/PgrMyDtQspBM-nJVlW9PbQ') }}>查看详情</button>
 			<div className="w-full h-[400px] md:h-80"></div>
 			<div id='contact-us' className="w-full min-h-[400px] md:min-h-80 absolute bottom-0 mt-16 pt-10 md:pt-20 object-cover dark:brightness-75" style={{ backgroundImage: `url(${footer})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
-				{/* //!为什么h就一定要个min呢？哪个拦着你这么高了？overflow-auto？ */}
 				<h2 className='w-full text-2xl text-white text-center'>Contact Us</h2>
-				{/* <img className='absolute bottom-0 object-cover pointer-events-none' draggable={false} src={footer} alt="" /> */}
 				<div className="w-[750px] mt-4 flex flex-col md:flex-row items-center absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
 					<img className='size-20 md:size-32 mr-5' src={qrcode} alt="Matrix on Wechat" />
-					{/* <div className=""></div> */}
 					<div className="grid grid-cols-1 md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-4 text-white">
 						{contactInfo.map((item, index) =>
 							<div key={index} className="w-fit flex items-center">

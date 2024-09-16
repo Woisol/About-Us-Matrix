@@ -16,16 +16,11 @@ export default function Course() {
 	return (
 		<div id='course' className="w-screen h-screen relative snap-end pt-20 overflow-hidde">
 			<div className="w-full h-full flex flex-col sm:flex-row items-start sm:items-center justify-between">
-				{/* // !记住了！between就可以分布在两端！ */}
 				<div className="w-[700px] max-h-full overflow-hidde -mr-96 md:-mr-48 lg:mr-0 animation-show-early">
-					{/* //!！！！！！！！！！md下次注意父元素有overflow-hidden也会无效！！！！！ */}
-					{/* //!同时似乎也不能应用在img上 */}
-					{/* //!md必须加个div才能用flex-1 */}
 					<img className='w-full h-full object-fill dark:brightness-75' src={illuCourse} alt="Course System" />
 				</div>
 				<div className="max-w-full absolute bottom-20 sm:static flex sm:flex-1 items-center justify-center">
 					<div className='w-full max-w-[600px] p-10 sm:pl-10 mt-0 flex gap-5 flex-col shrink-0 z-10 animation-show-early'>
-						{/* //! w-full和flex-1还是有区别的！w-full根据父元素，而flex-1才是正统的“填满剩余！” */}
 						<p className='text-4xl font-bold'>课程系统</p>
 						<p className='text-gray-500 '>Matrix Course系统支持多门课程管理，支持5种题型从出题到做题、做题到改题的所有基本功能。支持C/C++在线评测、抄袭检查、数据统计及批量导出。</p>
 						{featureInfo.map((item, index) =>

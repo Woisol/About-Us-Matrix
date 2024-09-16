@@ -7,20 +7,17 @@
 } */
 
 body {
-	font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
+	font-family: "sans", "sans-serif", "monospace", "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
 	scroll-behavior: smooth;
 }
 
 .img {
 	-webkit-user-drag: none;
-	/* @apply dark:brightness-75 */
-	/* !似乎不能用dark:的伪类…… */
 }
 
 /* .img:where(.dark, .dark *) {
 	filter: brightness(0.75);
 } */
-/* !？？？不起效？？ */
 
 .btn-scale {
 	@apply transition-all hover:scale-110 active:scale-90;
@@ -39,18 +36,11 @@ body {
 	content: '';
 	height: 2px;
 	background: gray;
-	/* 伪元素默认样式 display: inline;所以需要转成inline-block宽高才会生效 */
 	display: inline-block;
-	/* 通过定位使下划线在最低层 */
 	position: absolute;
 	bottom: 3px;
 	width: 0;
-	/* 加上一个过渡效果，使之丝滑一些 */
 	transition: width 0.2s;
-
-	/* &:hover {
-		width: 100%;
-	} */
 }
 
 .underline-animation:hover::before {
@@ -68,11 +58,10 @@ ul::before {
 	margin-right: 5px;
 }
 
-/* //**----------------------------Animation----------------------------------------------------- */
+/***----------------------------Animation----------------------------------------------------- */
 @keyframes setTop {
 	from {
 		/* height: 100vh; */
-		/* !用height始终会出现抽搐的问题 */
 		transform: scale3d(1, 1, 1);
 		/* margin-bottom: 0; */
 		top: 0;
@@ -85,7 +74,6 @@ ul::before {
 		/* margin-bottom: -30vh; */
 		top: 95vh;
 		/* top: calc(80vh+80px); */
-		/* !注意不能用100vh不然抽搐 */
 		/* position: sticky; */
 	}
 }
@@ -179,7 +167,6 @@ ul::before {
 @keyframes zoomIn-early {
 	from {
 		transform: scale3d(0.1, 0.1, 0.1);
-		/* !后面这个0.1不能是0……应该不是你之前想的z轴…… */
 		opacity: 0;
 	}
 
@@ -205,19 +192,13 @@ ul::before {
 
 @keyframes enterenter {
 	0% {
-		/* 加上文字间距 */
 		letter-spacing: 0.5em;
-		/* Z轴变换 */
 		transform: translateZ(300px);
-		/* filter: blur(); 像素模糊效果 */
 		filter: blur(12px);
-		/* 透明度也要改变 */
 		opacity: 0;
-		/* white-space: nowrap; */
 	}
 
 	100% {
-		/* transform: translateZ(12px); */
 		filter: blur(0);
 		opacity: 1;
 	}
@@ -249,7 +230,6 @@ ul::before {
 	}
 }
 
-/* !md那个animate.css用不了只好自己实现了…… */
 
 /* .animation-MOJ-timeline {
 	scroll-timeline: MOJ-timeling;
@@ -267,7 +247,6 @@ ul::before {
 	animation-timeline: view();
 	/* animation-timeline: MOJ-timeling; */
 	animation-range: 0 400px;
-	/* ~~？？这个不能用vh和%的吗？ */
 }
 
 /* .animation-tab {
@@ -276,20 +255,20 @@ ul::before {
 	animation-timeline: scroll();
 } */
 
-.animation-slideIn-l {
+/* .animation-slideIn-l {
 	animation: slide-l 0.5s ease-in-out;
-	/* animation-fill-mode: forwards; */
+	animation-fill-mode: forwards;
 	animation-timeline: view();
-	/* animation-range: entry; */
-	/* animation-delay: 1s; */
+	animation-range: entry;
+	animation-delay: 1s;
 }
 
 .animation-slideIn-r {
 	animation: slide-r 0.5s ease-in-out;
-	/* animation-fill-mode: forwards; */
+	animation-fill-mode: forwards;
 	animation-timeline: view();
 	animation-range: 0 500px;
-}
+} */
 
 .animation-show {
 	opacity: 0;
@@ -304,7 +283,6 @@ ul::before {
 	animation: show-early 1s ease-in-out;
 	animation-timeline: view();
 	/* animation-range: 0 60%; */
-	/* !不能用range不然下滑时消失……用fillmode都不行…… */
 	/* animation-range: entry; */
 	animation-fill-mode: forwards;
 }
@@ -314,7 +292,6 @@ ul::before {
 	animation: zoomIn-early 1s ease-in-out;
 	animation-timeline: view();
 	/* animation-range: 0 60%; */
-	/* !不能用range不然下滑时消失……用fillmode都不行…… */
 	/* animation-range: entry; */
 	/* animation-fill-mode: forwards; */
 }
@@ -323,7 +300,6 @@ ul::before {
 	opacity: 0;
 	animation: enterenter 1s ease-in-out;
 	animation-fill-mode: forwards;
-	/* !加个forward就可以防止动画完变回去了！ */
 	/* animation-timeline: view(); */
 	animation-delay: 1s;
 }
@@ -332,7 +308,6 @@ ul::before {
 	opacity: 0;
 	animation: enterenter 1s ease-in-out;
 	animation-fill-mode: forwards;
-	/* !加个forward就可以防止动画完变回去了！ */
 	/* animation-timeline: view(); */
 	animation-delay: 2s;
 }
@@ -341,7 +316,6 @@ ul::before {
 	opacity: 0;
 	animation: enterenter 1s ease-in-out;
 	animation-fill-mode: forwards;
-	/* !加个forward就可以防止动画完变回去了！ */
 	/* animation-timeline: view(); */
 	animation-delay: 3s;
 }
