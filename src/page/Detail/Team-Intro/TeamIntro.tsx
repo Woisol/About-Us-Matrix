@@ -1,11 +1,11 @@
-import { forwardRef } from 'react'
+import { forwardRef, LegacyRef } from 'react'
 import photo1 from '../../../public-not/photo1.jpeg'
 // import photo1 from '../../../public-not/photo1.jpeg'
 import photo2 from '../../../public-not/photo2.jpeg'
 import photo3 from '../../../public-not/photo3.jpeg'
 const TeamIntro = forwardRef((_p, ref) => {
 	return (
-		<div ref={ref} id='team-intro' className="w-screen min-h-screen relative snap-end p-20">
+		<div ref={ref as LegacyRef<HTMLDivElement>} id='team-intro' className="w-screen min-h-screen relative snap-end p-20">
 			<div className="w-full flex justify-center">
 				<p className='my-10 pt-4 absolut left-1/2 -translate-x-1/ border-t-4 border-blue-400 text-center text-4xl z-10'>团队介绍</p>
 			</div>

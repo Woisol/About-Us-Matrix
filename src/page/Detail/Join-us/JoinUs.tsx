@@ -62,10 +62,10 @@ const JoinUs = forwardRef((_p, ref) => {
 			<p className='my-5 py-4 border-t-4 border-blue-400 text-center text-4xl z-10'>加入我们</p>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300 my-4">我能获得什么？</p>
-				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center animation-show-early">
+				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{/* //~~ animation-show-early又不知为何没效果……？overflow-auto 也不行？！ */}
 					{toGainInfo.map((item, index) =>
-						<div key={index} className="w-52 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col">
+						<div key={index} className="w-52 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col animation-show-early">
 							<img className='dark:brightness-75' src={item.img} alt={item.title} />
 							<ul className='text-xl text-blue-300 mb-3'>{item.title}</ul>
 							<p>{item.desc}</p>
@@ -75,9 +75,9 @@ const JoinUs = forwardRef((_p, ref) => {
 			</div>
 			<div className='my-4'>
 				<p className="w-full text-center text-xl text-blue-300 my-4">我能做些什么？</p>
-				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center animation-show-early">
+				<div className="grid grid-cols-2 grid-rows-2 sm:grid-cols-4 sm:grid-rows-1 gap-5 justify-center">
 					{toDoInfo.map((item, index) =>
-						<div key={index} className="w-32 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col items-center">
+						<div key={index} className="w-32 px-5 py-2 bg-white dark:bg-gray-500 rounded-lg shadow-lg flex flex-col items-center animation-show-early">
 							<img className='dark:brightness-75' src={item.avatar} alt={item.job} />
 							<p className='text-xl text-blue-300 my-2'>{item.job}</p>
 						</div>
