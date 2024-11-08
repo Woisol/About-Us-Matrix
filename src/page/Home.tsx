@@ -5,6 +5,7 @@ import DarkModeSwitcher from './Components/DarkModeSwitcher'
 export default function Page_Home({ darkMode, setDarkMode }: { darkMode: boolean, setDarkMode: (value: boolean) => void }) {
 	return (
 		<div className="w-screen h-screen relative snap-start bg-gradient-to-t from-blue-200 to-blue-500 dark:from-blue-500 dark:to-blue-900">
+			<div className="size-7 absolute right-8 top-8 bg-gray-950"></div>
 			<DarkModeSwitcher darkMode={darkMode} setDarkMode={setDarkMode} />
 			<img className='max-w-full h-screen p-5 object-contain absolute right-1/2 sm:right-5 top-1/2 translate-x-1/2 sm:translate-x-0 -translate-y-1/2 opacity-10 pointer-events-none' draggable={false} src={logo_white} alt="" />
 			<img className='w-full h-1/3 absolute bottom-0 object-cover pointer-events-none transition-all dark:brightness-75' draggable={false} src={bgstart1} alt="" />

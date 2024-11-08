@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Page_Home from './page/Home'
-import './MainView.css'
+// import './MainView.css'
+import './input.css'
 import 'animate.css'
 import Header from './page/Header'
 import ProductIntro from './page/Detail/Product-Intro/ProductIntro'

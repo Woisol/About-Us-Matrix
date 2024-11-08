@@ -1,5 +1,113 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
 /*
-! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -442,116 +550,8 @@ video {
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
 
-[hidden] {
+[hidden]:where(:not([hidden="until-found"])) {
   display: none;
-}
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
 }
 
 .pointer-events-none {
@@ -586,10 +586,6 @@ video {
   bottom: 5rem;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .left-1\/2 {
   left: 50%;
 }
@@ -598,8 +594,16 @@ video {
   left: 2.5rem;
 }
 
+.left-9 {
+  left: 2.25rem;
+}
+
 .right-1\/2 {
   right: 50%;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .right-5 {
@@ -864,10 +868,6 @@ video {
   max-width: 100%;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .shrink-0 {
   flex-shrink: 0;
 }
@@ -990,10 +990,6 @@ video {
   gap: 0.25rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
@@ -1032,10 +1028,6 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.border-b-2 {
-  border-bottom-width: 2px;
 }
 
 .border-b-4 {
@@ -1291,21 +1283,17 @@ video {
 } */
 
 body {
-  font-family: "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
+  font-family: "sans", "sans-serif", "monospace", "Microsoft Yahei", "Droid Sans", 'Times New Roman', serif;
   scroll-behavior: smooth;
 }
 
 .img {
   -webkit-user-drag: none;
-  /* @apply dark:brightness-75 */
-  /* !似乎不能用dark:的伪类…… */
 }
 
 /* .img:where(.dark, .dark *) {
 	filter: brightness(0.75);
 } */
-
-/* !？？？不起效？？ */
 
 .btn-scale {
   transition-property: all;
@@ -1402,17 +1390,11 @@ body {
   content: '';
   height: 2px;
   background: gray;
-  /* 伪元素默认样式 display: inline;所以需要转成inline-block宽高才会生效 */
   display: inline-block;
-  /* 通过定位使下划线在最低层 */
   position: absolute;
   bottom: 3px;
   width: 0;
-  /* 加上一个过渡效果，使之丝滑一些 */
   transition: width 0.2s;
-  /* &:hover {
-		width: 100%;
-	} */
 }
 
 .underline-animation:hover::before {
@@ -1430,12 +1412,11 @@ ul::before {
   margin-right: 5px;
 }
 
-/* //**----------------------------Animation----------------------------------------------------- */
+/***----------------------------Animation----------------------------------------------------- */
 
 @keyframes setTop {
   from {
     /* height: 100vh; */
-    /* !用height始终会出现抽搐的问题 */
     transform: scale3d(1, 1, 1);
     /* margin-bottom: 0; */
     top: 0;
@@ -1448,7 +1429,6 @@ ul::before {
     /* margin-bottom: -30vh; */
     top: 95vh;
     /* top: calc(80vh+80px); */
-    /* !注意不能用100vh不然抽搐 */
     /* position: sticky; */
   }
 }
@@ -1542,7 +1522,6 @@ ul::before {
 @keyframes zoomIn-early {
   from {
     transform: scale3d(0.1, 0.1, 0.1);
-    /* !后面这个0.1不能是0……应该不是你之前想的z轴…… */
     opacity: 0;
   }
 
@@ -1568,19 +1547,13 @@ ul::before {
 
 @keyframes enterenter {
   0% {
-    /* 加上文字间距 */
     letter-spacing: 0.5em;
-    /* Z轴变换 */
     transform: translateZ(300px);
-    /* filter: blur(); 像素模糊效果 */
     filter: blur(12px);
-    /* 透明度也要改变 */
     opacity: 0;
-    /* white-space: nowrap; */
   }
 
   100% {
-    /* transform: translateZ(12px); */
     filter: blur(0);
     opacity: 1;
   }
@@ -1612,8 +1585,6 @@ ul::before {
   }
 }
 
-/* !md那个animate.css用不了只好自己实现了…… */
-
 /* .animation-MOJ-timeline {
 	scroll-timeline: MOJ-timeling;
 } */
@@ -1630,7 +1601,6 @@ ul::before {
   animation-timeline: view();
   /* animation-timeline: MOJ-timeling; */
   animation-range: 0 400px;
-  /* ~~？？这个不能用vh和%的吗？ */
 }
 
 /* .animation-tab {
@@ -1639,20 +1609,20 @@ ul::before {
 	animation-timeline: scroll();
 } */
 
-.animation-slideIn-l {
-  animation: slide-l 0.5s ease-in-out;
-  /* animation-fill-mode: forwards; */
-  animation-timeline: view();
-  /* animation-range: entry; */
-  /* animation-delay: 1s; */
+/* .animation-slideIn-l {
+	animation: slide-l 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-timeline: view();
+	animation-range: entry;
+	animation-delay: 1s;
 }
 
 .animation-slideIn-r {
-  animation: slide-r 0.5s ease-in-out;
-  /* animation-fill-mode: forwards; */
-  animation-timeline: view();
-  animation-range: 0 500px;
-}
+	animation: slide-r 0.5s ease-in-out;
+	animation-fill-mode: forwards;
+	animation-timeline: view();
+	animation-range: 0 500px;
+} */
 
 .animation-show {
   opacity: 0;
@@ -1667,7 +1637,6 @@ ul::before {
   animation: show-early 1s ease-in-out;
   animation-timeline: view();
   /* animation-range: 0 60%; */
-  /* !不能用range不然下滑时消失……用fillmode都不行…… */
   /* animation-range: entry; */
   animation-fill-mode: forwards;
 }
@@ -1677,7 +1646,6 @@ ul::before {
   animation: zoomIn-early 1s ease-in-out;
   animation-timeline: view();
   /* animation-range: 0 60%; */
-  /* !不能用range不然下滑时消失……用fillmode都不行…… */
   /* animation-range: entry; */
   /* animation-fill-mode: forwards; */
 }
@@ -1686,7 +1654,6 @@ ul::before {
   opacity: 0;
   animation: enterenter 1s ease-in-out;
   animation-fill-mode: forwards;
-  /* !加个forward就可以防止动画完变回去了！ */
   /* animation-timeline: view(); */
   animation-delay: 1s;
 }
@@ -1695,7 +1662,6 @@ ul::before {
   opacity: 0;
   animation: enterenter 1s ease-in-out;
   animation-fill-mode: forwards;
-  /* !加个forward就可以防止动画完变回去了！ */
   /* animation-timeline: view(); */
   animation-delay: 2s;
 }
@@ -1704,7 +1670,6 @@ ul::before {
   opacity: 0;
   animation: enterenter 1s ease-in-out;
   animation-fill-mode: forwards;
-  /* !加个forward就可以防止动画完变回去了！ */
   /* animation-timeline: view(); */
   animation-delay: 3s;
 }
